@@ -1,5 +1,6 @@
 from dash import Dash, dcc, html, Input, Output
 import numpy as np
+import os
 #### Fetch Data
 
 import plotly.express as px
@@ -84,4 +85,6 @@ def graph_update(slider_value):
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    for key in os.environ:
+        print(key, '=>', os.environ[key])
+    app.run_server(port=os.getenv('PORT') or 8051,host='0.0.0.0')
