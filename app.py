@@ -30,11 +30,6 @@ for data in earth_quake_data:
 df = pd.DataFrame.from_records(magnitude_data)
 df.columns = columns
 
-print(df.head(), magnitude_data)
-
-# print(df['Magnitude'].min(), df['Magnitude'].max(), df['Magnitude'].min())
-print(df['Magnitude'].unique())
-
 ####
 
 
